@@ -1,0 +1,17 @@
+.container {
+  --max-width: 920px;
+  --padding-inline: 2rem;
+
+  width: min(var(--max-width), 100% - var(--padding-inline));
+  margin-inline: auto;
+  padding-block: 1rem;
+}
+
+.grid {
+  display: grid;
+  place-items: center;
+}
+
+.flex { 
+  display: flex;
+}
