@@ -1,5 +1,4 @@
-
-function Header() {
+export function Header() {
   return (
     <header>
       <div className="container">
@@ -7,7 +6,5 @@ function Header() {
         <p>Get points by clicking on an image only once!</p>
       </div>
     </header>
-  )
+  );
 }
-
-export default Header;
