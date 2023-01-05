@@ -26,6 +26,7 @@ header .container * {
 }
 
 .container--board {
+  --max-width: 1100px;
   flex-direction: column;
 }
 
@@ -35,6 +36,7 @@ header .container * {
 
 .container--cards {
   --padding-inline: 0rem;
+  --max-width: 1100px;
 }
 
 .scoreboard {
