@@ -1,9 +1,9 @@
 export function Header() {
   return (
     <header>
-      <div className="container">
-        <h1>Heroes Memory Card Game</h1>
-        <p>Get points by clicking on an image only once!</p>
+      <div className="container typography-header">
+        <h1>Pokemon Memory Card Game</h1>
+        <p>Get points by clicking on a pokemon only once!</p>
       </div>
     </header>
   );
