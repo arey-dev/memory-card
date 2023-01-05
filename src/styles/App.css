@@ -6,6 +6,10 @@ body {
   background-color: #18a46a;
 }
 
+body * {
+  border: 1px solid black;
+}
+
 header .container * {
   color: #eee6a4
 }
@@ -19,4 +23,16 @@ header .container * {
 .typography-header p {
   font-size: 1.25rem;
   font-weight: 500;
+}
+
+.container--board {
+  flex-direction: column;
+}
+
+.container--board > *:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.container--cards {
+  --padding-inline: 0rem;
 }
