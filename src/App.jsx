@@ -1,13 +1,13 @@
 import "./styles/App.css";
 import { Header } from "./Header";
-import { GameBoard } from "./GameBoard";
+import { Game } from "./Game";
 
 function App() {
   return (
     <>
       <Header />
       <main>
-        <GameBoard />
+        <Game />
       </main>
     </>
   );

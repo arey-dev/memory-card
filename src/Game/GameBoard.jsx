@@ -1,5 +1,5 @@
-import { CardsGrid } from './CardsGrid/CardsGrid'
-import { ScoreBoard } from './ScoreBoard'
+import { CardsGrid } from "./CardsGrid";
+import { ScoreBoard } from "./ScoreBoard";
 
 export function GameBoard(props) {
   return (
@@ -7,5 +7,5 @@ export function GameBoard(props) {
       <ScoreBoard />
       <CardsGrid />
     </div>
-  )
+  );
 }
