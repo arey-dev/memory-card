@@ -1,5 +1,5 @@
 export function Card(props) {
-  const { src, name } = props;
+  const { src, name} = props;
 
   return (
     <div className="card flex typography-card">
