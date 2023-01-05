@@ -4,7 +4,7 @@ import { ScoreBoard } from "./ScoreBoard";
 export function GameBoard(props) {
   return (
     <div className="container container--board flex">
-      <ScoreBoard />
+      <ScoreBoard scores={props.scores} />
       <CardsGrid />
     </div>
   );
