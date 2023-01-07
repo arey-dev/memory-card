@@ -2,7 +2,7 @@ import { Card } from "./Card";
 
 export function CardsGrid(props) {
   const cards = props.pokemonCards.map((card) => (
-    <Card key={card.id} src={card.imgUrl} name={card.name} />
+    <Card key={card.id} src={card.imgUrl} name={card.name} id={card.id} />
   ));
 
   return (

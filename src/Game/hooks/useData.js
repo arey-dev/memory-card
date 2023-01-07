@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
+import { shuffleArray } from "../game_utils";
 
-export function useData() {
+export function useData(num) {
   const [data, setData] = useState({ pokemons: [] });
 
   const URL = "https://pokeapi.co/api/v2/pokemon/";
-  let pokemonNum = 8;
+  let pokemonNum = num;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,5 +27,5 @@ export function useData() {
     fetchData();
   }, []);
 
-  return data.pokemons;
+  return shuffleArray(data.pokemons);
 }

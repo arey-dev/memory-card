@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { GameBoard } from "./GameBoard";
-import { useData } from "./hooks/useData";
+import { useData } from "./hooks";
+import { storeCard, isCardStored, resetStoredCards } from "./game_utils";
+import { shuffleArray } from "./game_utils";
 
 export function Game() {
-  const pokemons = useData();
+  const pokemons = useData(8);
 
   const [scores, setScores] = useState({ current: 0, best: 0 });
 
@@ -21,8 +23,30 @@ export function Game() {
     });
   };
 
+  const resetScore = () => {
+    setScores((prevScores) => {
+      return { ...prevScores, current: 0 };
+    });
+  };
+
+  const play = (id) => {
+    if (!isCardStored(id)) {
+      storeCard(id);
+      updateScore(1);
+    } else {
+      resetScore();
+      resetStoredCards();
+    }
+  };
+
   const handleCardClick = (e) => {
-    updateScore(1);
+    const target = e.target.closest(".card");
+
+    if (!target || target.tagName !== "DIV") return;
+
+    const id = target.getAttribute("data-id");
+
+    play(id);
   };
 
   return (
