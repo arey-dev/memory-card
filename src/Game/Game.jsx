@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { GameBoard } from "./GameBoard";
 import { useData } from "./hooks";
 import { storeCard, isCardStored, resetStoredCards } from "./game_utils";
-import { shuffleArray } from "./game_utils";
 
 export function Game() {
   const pokemons = useData(8);
