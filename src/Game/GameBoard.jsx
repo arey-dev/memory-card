@@ -5,7 +5,7 @@ export function GameBoard(props) {
   return (
     <div className="container container--board flex">
       <ScoreBoard scores={props.scores} />
-      <CardsGrid onCardClick={props.onHandleCardClick} />
+      <CardsGrid onCardClick={props.onHandleCardClick} pokemonCards={props.cards} />
     </div>
   );
 }

@@ -8,23 +8,23 @@ export function useData() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const pokemons = [];
+      const pokemonList = [];
 
-      for (let i = 1; i <= NUM_OF_POKEMONS; i++) {
+      for (let i = 1; i <= pokemonNum; i++) {
         const result = await fetch(URL + i);
         const pokemon = await result.json();
         const name = pokemon.name;
         const id = pokemon.id;
         const imgUrl = pokemon.sprites.front_default;
 
-        pokemons.push({ name, id, imgUrl });
+        pokemonList.push({ name, id, imgUrl });
       }
 
-      setData(pokemons);
+      setData({ pokemons: pokemonList });
     };
 
     fetchData();
   }, []);
 
-  return data;
+  return data.pokemons;
 }

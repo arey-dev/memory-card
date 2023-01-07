@@ -23,8 +23,13 @@ export function Game() {
 
   const handleCardClick = (e) => {
     updateScore(1);
-    console.log(pokemons)
   };
 
-  return <GameBoard scores={scores} onHandleCardClick={handleCardClick} />;
+  return (
+    <GameBoard
+      cards={pokemons}
+      scores={scores}
+      onHandleCardClick={handleCardClick}
+    />
+  );
 }
