@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
 import { GameBoard } from "./GameBoard";
+import { useData } from "./hooks/useData";
 
 export function Game() {
+  const pokemons = useData();
+
   const [scores, setScores] = useState({ current: 0, best: 0 });
 
   const updateScore = (point) => {
@@ -20,8 +23,8 @@ export function Game() {
 
   const handleCardClick = (e) => {
     updateScore(1);
-    console.log(1);
-  }
+    console.log(pokemons)
+  };
 
-  return <GameBoard scores={scores} onHandleCardClick={handleCardClick}/>;
+  return <GameBoard scores={scores} onHandleCardClick={handleCardClick} />;
 }
